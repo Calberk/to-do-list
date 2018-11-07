@@ -3,6 +3,7 @@ import React from 'react';
 
 
 class AddItem extends React.Component {
+    
     state = {
         title: '',
         details: '',
@@ -12,6 +13,7 @@ class AddItem extends React.Component {
         event.preventDefault();
 
         this.props.add(this.state);  
+
         this.setState({
             title: '',
             details:''
