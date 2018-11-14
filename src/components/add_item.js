@@ -1,5 +1,6 @@
 import React from 'react';
 //import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 
 class AddItem extends React.Component {
@@ -21,6 +22,14 @@ class AddItem extends React.Component {
     }
     render(){
         return (
+            <div>
+                <h1 className="center">Add To Do Item</h1>
+
+                <div className="row">
+                    <div className="col s12 right-align">
+                    <Link to='/' className='btn chartreuse'>Back To List</Link>
+                    </div>
+                </div>
                 <form onSubmit={this.handleAddingItem}>
                     <div className="row">
                         <div className="input-field col s8 offset-s2">
@@ -38,9 +47,9 @@ class AddItem extends React.Component {
                         <div className="col s8 offset-s2 right-align">
                             <button className="btn red darken-2">Add Item</button>
                         </div>
-                    </div>
-                    
+                    </div>           
                 </form>
+            </div>
         )
     }
 }
