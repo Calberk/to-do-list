@@ -61,7 +61,7 @@ class App extends Component{
     }
 
     addItem = async (item) => {
-        const resp = await axios.post(BASE_URL + API_KEY, item);
+        await axios.post(BASE_URL + API_KEY, item);  //not setting to a const variable because its not being reused
         console.log('Add item response: ', resp);
         
         this.getListData();
@@ -76,7 +76,7 @@ class App extends Component{
     deleteItem = async (id) => {
         console.log('Delete item with: ', id);
         // http://api.reactprototypes.com/todos/{id}?key=c718_demouser 
-        const resp = await axios.delete(`${BASE_URL}/${id + API_KEY} `)
+        await axios.delete(`${BASE_URL}/${id + API_KEY} `)   //not setting to a const variable because its not being reused
 
 
             this.getListData();
